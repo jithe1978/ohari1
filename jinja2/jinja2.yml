@@ -1,0 +1,11 @@
+--- # jinja experiment
+- hosts: apacheweb
+  remote_user: ansible
+  connection: ssh
+  become: yes
+  become_method: sudo
+  vars_files:
+  - values.property
+  tasks:
+  - name: use the http.conf template
+    template: src=httpd.conf dest=/home/ansible/http.conf owner=ansible mode=755
