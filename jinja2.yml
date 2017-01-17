@@ -1,0 +1,9 @@
+--- # jinja experiment
+- hosts: apacheweb
+  remote_user: awx
+  connection: ssh
+  vars_files:
+  - values.property
+  tasks:
+  - name: use the http.conf template
+    template: src=httpd.conf dest=/var/tmp/http.conf owner=ansible mode=755
