@@ -1,0 +1,5 @@
+--- # ping the hosts
+- hosts: localhost
+  tasks:
+  - name: ping the hosts
+    ping:
