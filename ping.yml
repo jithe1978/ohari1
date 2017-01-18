@@ -1,5 +1,8 @@
 --- # ping the hosts
 - hosts: localhost
+  user: awx
+  connection: ssh
+  
   tasks:
   - name: ping the hosts
     ping:
